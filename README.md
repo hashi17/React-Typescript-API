@@ -15,3 +15,21 @@ Created with CodeSandbox
     から
     export const Todo: VFC<Omit<TodoType, "id">> = (props)
     ```
+
+## オプショナルチェイニング
+
+```
+user.hobbies?.join(" / ")
+hobbiesが存在しなければ、Undefinedを返してくれる
+通常だとhobbiesがnullの場合、joinでエラーとなる
+```
+
+## ライブラリの型定義
+
+react-router-dom ライブラリに対しての型定義は
+@types/react-router-dom
+と、基本@types/となっている
+
+ライブラリに
+index.d.ts が含まれる場合は、そのライブラリ自体に定義されている
+または、package.json に、"typings" の項目が含まれるかで見分ける
